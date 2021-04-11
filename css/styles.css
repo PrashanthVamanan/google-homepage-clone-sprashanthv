@@ -157,6 +157,11 @@ header .nav-items {
   background-color: var(--button-color);
   color: var(--button-text-color);
   border: none;
+  cursor: pointer;
+}
+
+.buttons .search-btn:hover, .buttons .lucky-btn:hover {
+  outline: var(--search-focus-hover-outline) 1px solid;
 }
 
 /* Other Languages Styles */
