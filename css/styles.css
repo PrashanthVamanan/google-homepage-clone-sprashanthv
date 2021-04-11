@@ -1,0 +1,278 @@
+/* Global Styles and CSS Variables */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --product-dots: #5F6368;
+  --search-outline: #EBEBEB;
+  --search-focus-hover-outline: #DFE1E5;
+  --search-icon-color: #C6CACD;
+  --button-color: #F8F9FA;
+  --button-text-color: #202124;
+  --footer-bg: #F2F2F2;
+  --footer-country-color: #6F6F6F;
+  --footer-other-items-color : #70757A;
+  --divider-line: var(--#DADCE0);
+}
+
+/*Make the footer sticky */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  font-size: 13px;
+}
+
+header .nav-items {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.nav-items .text, .nav-items .other-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items .text p {
+  margin: 0px 10px;
+}
+
+.nav-items .text p a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.nav-items .products, .nav-items .profile {
+  margin: 0px 10px;
+}
+
+.nav-items .products .row {
+  display: flex;
+  width: 15px;
+  margin: 0px 10px;
+}
+
+.profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #dddddd;
+}
+
+.profile img {
+  margin: 2px 3px;
+}
+
+/* Google Logo Styles */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* Search box styles */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  position: relative;
+}
+
+.search input {
+  margin: 20px 0px;
+  padding: 15px 55px;
+  width: 500px;
+  border-radius: 50px;
+  border: 1px solid var(--search-outline);
+  text-align: left;
+}
+
+.search input:focus, .search input:hover {
+  outline: none;
+  box-shadow: 0px 0px 2px 2px var(--search-focus-hover-outline);
+}
+
+.search-box-icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.search-box-icons .search-icon {
+  color: var(--search-icon-color);
+}
+
+.search-box-icons .icon-pos {
+  margin: -86px 20px 0 20px;
+}
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.buttons .search-btn, .buttons .lucky-btn {
+  margin: 0px 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border: none;
+}
+
+/* Other Languages Styles */
+.other-languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 13px;
+}
+
+.other-languages a {
+  margin: 0px 3px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--footer-bg);
+  height: 100px;
+}
+
+footer .country {
+  padding: 15px;
+  color: var(--footer-country-color);
+  margin: 0px 20px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+hr {
+  color: var(--divider-line);
+  height: 1px;
+}
+
+.other-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.other-options .option-set-one, .other-options .option-set-two {
+  margin: 15px 30px;
+}
+
+.other-options .option-set-one span, .other-options .option-set-two span {
+  margin: 0px 10px;
+}
+
+.other-options .option-set-one span a, .other-options .option-set-two span a{
+  font-size: 14px;
+  color: var(--footer-other-items-color);
+}
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 698px) {
+  .search input {
+    width: 350px;
+  }
+
+  .other-options {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .other-options .option-set-one, .other-options .option-set-two {
+    margin: 15px 20px;
+  }
+} 
+
+@media (max-width: 664px) {
+  .other-options {
+    flex-wrap: wrap;
+  }
+
+  .other-options .option-set-one,  .other-options .option-set-two{
+    width: 100%;
+    text-align: center;
+  }
+
+  .other-languages {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    height: 150px;
+  }
+}
+
+@media (max-width: 558px) {
+  .search-input input {
+    width: 250px;
+  }
+
+  .other-languages a {
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 460px) {
+  .search-input input {
+    width: 125px;
+  }
+
+  .footer {
+    height: 200px;
+  }
+
+  .other-options .option-set-one, .other-options .option-set-two {
+    margin: 15px 20px;
+  }
+
+  .other-options .option-set-one span, .other-options .option-set-two span {
+    margin: 0px 5px;
+  }
+}
